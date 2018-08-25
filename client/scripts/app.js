@@ -47,7 +47,6 @@ var app = {
       success: function (data) {
         // Clear messages input
         app.$message.val('');
-        console.log();
 
         // Trigger a fetch to update the messages, pass true to animate
         app.fetch();
@@ -74,7 +73,7 @@ var app = {
         var mostRecentMessage = data.results[0];
 
         // Only bother updating the DOM if we have a new message
-        if (mostRecentMessage.objectId !== app.lastMessageId) {
+        if (mostRecentMessage.id !== app.lastMessageId) {
           // Update the UI with the fetched rooms
           app.renderRoomList(data.results);
 
@@ -145,6 +144,7 @@ var app = {
   },
 
   renderMessage: function(message) {
+    
     if (!message.roomname) {
       message.roomname = 'lobby';
     }
@@ -163,7 +163,7 @@ var app = {
     }
 
     var $message = $('<br><span/>');
-    $message.text(message.text).appendTo($chat);
+    $message.text(message.message).appendTo($chat);
 
     // Add the message to the UI
     app.$chats.append($chat);
@@ -215,7 +215,7 @@ var app = {
   handleSubmit: function(event) {
     var message = {
       username: app.username,
-      text: app.$message.val(),
+      message: app.$message.val(),
       roomname: app.roomname || 'lobby'
     };
 

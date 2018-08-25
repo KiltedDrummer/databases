@@ -30,7 +30,8 @@ CREATE TABLE messages (
 /* Create other tables and define schemas for them here! */
 
 
-
+INSERT INTO users (username) VALUES ('Nick');
+INSERT INTO messages (userId, roomname, message) VALUES (1, 'Lobby', 'This is a test');
 
 /*  Execute this file from the command line by typing:
  *    mysql -u root < server/schema.sql

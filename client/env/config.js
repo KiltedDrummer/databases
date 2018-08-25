@@ -2,7 +2,7 @@
 // request that you make so you don't have to.
 
 // Put your parse application keys here!
-$.ajaxPrefilter(function (settings, _, jqXHR) {
-  jqXHR.setRequestHeader('accept', 'accept');
-  jqXHR.setRequestHeader('accept', 'accept');
-});
+// $.ajaxPrefilter(function (settings, _, jqXHR) {
+//   jqXHR.setRequestHeader('accept', 'accept');
+//   jqXHR.setRequestHeader('accept', 'accept');
+// });
