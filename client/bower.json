@@ -1,0 +1,22 @@
+{
+  "name": "client",
+  "homepage": "https://github.com/KiltedDrummer/hrsf102-databases",
+  "authors": [
+    "Hack Reactor Student <student@hackreactor.com>"
+  ],
+  "description": "a chat app",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "backbone": "^1.3.3",
+    "jquery": "^3.3.1",
+    "underscore": "^1.9.1"
+  }
+}
