@@ -1,17 +1,14 @@
 var db = require('../db');
+// var config = require('../../orm-resources/orm.js');
 
 module.exports = {
   messages: {
     get: function (callback) {
-      db.connection.query('SELECT messages.id, users.username, messages.roomname, messages.message FROM users, messages WHERE messages.userId = users.id;', (err, rows, fields) => {
-        if (err) { return callback(err); }
-        callback(null, rows);
-      });
+      config.users.findAll().then((results) => console.log(results));
+    
     }, // a function which produces all the messages
     post: function (messageObj, callback) {
-      // find username Id
-      //post username
-      //then all this
+  
       db.connection.query('SELECT * FROM users WHERE username = ?', messageObj.username, (err, rows, fields) => {
         if (err) { throw err; }
           
